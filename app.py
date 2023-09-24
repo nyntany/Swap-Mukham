@@ -34,6 +34,7 @@ parser.add_argument("--cuda", action="store_true", help="Enable cuda", default=F
 parser.add_argument(
     "--colab", action="store_true", help="Enable colab mode", default=False
 )
+parser.add_argument("--max_threads", type=int, help="Max num of threads to use", default=2)
 user_args = parser.parse_args()
 
 ## ------------------------------ DEFAULTS ------------------------------
@@ -42,6 +43,7 @@ USE_COLAB = user_args.colab
 USE_CUDA = user_args.cuda
 DEF_OUTPUT_PATH = user_args.out_dir
 BATCH_SIZE = int(user_args.batch_size)
+MAX_THREADS = user_args.max_threads
 WORKSPACE = None
 OUTPUT_FILE = None
 CURRENT_FRAME = None
