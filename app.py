@@ -29,12 +29,12 @@ from utils import trim_video, StreamerThread, ProcessBar, open_directory, split_
 
 parser = argparse.ArgumentParser(description="Swap-Mukham Face Swapper")
 parser.add_argument("--out_dir", help="Default Output directory", default=os.getcwd())
-parser.add_argument("--batch_size", help="Gpu batch size", default=32)
+parser.add_argument("--batch_size", help="Gpu batch size", default=36)
 parser.add_argument("--cuda", action="store_true", help="Enable cuda", default=False)
 parser.add_argument(
     "--colab", action="store_true", help="Enable colab mode", default=False
 )
-parser.add_argument("--max_threads", type=int, help="Max num of threads to use", default=2)
+parser.add_argument("--max_threads", type=int, help="Max num of threads to use", default=4)
 user_args = parser.parse_args()
 
 ## ------------------------------ DEFAULTS ------------------------------
